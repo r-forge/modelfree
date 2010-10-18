@@ -1,7 +1,7 @@
 Package: modelfree
 Type: Package
-Version: 0.2
-Date: 31/10/2009
+Version: 1.0
+Date: 18/10/2010
 Title: Model-free estimation of a psychometric function
 Author: Ivan Marin-Franch <ivan.marin@manchester.ac.uk>, Kamila Zychaluk <kamila.zychaluk@liverpool.ac.uk>, and David H. Foster <d.h.foster@manchester.ac.uk>
 Maintainer: Kamila Zychaluk <kamila.zychaluk@liverpool.ac.uk>, David H. Foster <d.h.foster@manchester.ac.uk>
