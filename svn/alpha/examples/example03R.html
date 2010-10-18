@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Ivan Marin-Franch">
+  <meta name="Description"
+ content="Nonparametric estimates of psychometric functions">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nonparametric estimates of psychometric functions: Examples</title>
+  <link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table class="titleBox" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="200"><img alt="logo"
+ src="../pictures/logo.jpg" style="width: 186px; height: 142px;"><br>
+      </th>
+      <th scope="col" bgcolor="#009933"> <h1 class="title" align="center">Model-free estimation of a psychometric function</h1>
+          <blockquote>
+            <h3 class="title" align="right"><script src="../version.js" type="text/javascript"></script></h3>
+          </blockquote></th>
+    </tr>
+    <tr> </tr>
+  </tbody>
+</table>
+<table class="navigationBox" cellspacing="5" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="14%"><a href="../home.html"
+ class="navigation">Home</a></th>
+      <th scope="col" width="14%"><a href="../downloads.html"
+ class="navigation">Downloads</a></th>
+      <th scope="col" width="14%"><a href="../demonstration.html"
+ class="navigation">Demonstration</a></th>
+      <th scope="col" width="14%"><a href="../documentation.html"
+ class="navigation">Documentation</a></th>
+      <th scope="col" bgcolor="#009933" width="14%"><FONT COLOR="#ffffff"><B>Examples</B></FONT></th>
+      <th scope="col" width="14%"><a href="../functions.html"
+ class="navigation">Functions</a></th>
+      <th scope="col" width="14%"><a href="../contacts.html"
+ class="navigation">Contacts</a></th>
+    </tr>
+  </tbody>
+</table>
+<!-- END OF HEADER -->
+<!-- BODY -->
+<h2>Example 3. Discrimination of pitch</h2>
+<blockquote>
+  <p>Unpublished data from S. Carcagno, Lancaster University, July 2008.</p>
+  <table width="25%" cellspacing="5" class="navigationBox2">
+    <tr>
+      <th width="50%" scope="col" class="navigation"><a href="example03.html" class="navigation">MatLab</a></th>
+      <th bgcolor="#009933" class="title" scope="col">R</th>
+    </tr>
+  </table>
+  <p><A HREF="../examples.html#pitch">Back to Examples</A></p>
+  <p>The subject had to identify the interval containing a tone whose fundamental frequency was different from that in the other two intervals. The symbols in the figure below show the proportion of correct responses as the difference between the tones varied. There were 3–49 trials at each stimulus level.</p>
+  <p><STRONG>Parametric and local linear fitting</STRONG></p>
+  <p>Three different parametric models and the local linear fitting are used and fits are plotted against the measured psychometric data. Three different parametric models are fitted to these data: Gaussian (probit), Weibull, and reverse Weibull. Local linear fitting is also performed with the bandwidth <code>bwd</code> chosen by the minimising cross-validated deviance.</p>
+  <p>Load the data and plot the measured psychometric data (black dots):</p>
+  <TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <TR>
+      <TD><CODE>data(&quot;03_Carcagno&quot;);<BR>
+                x = example03$x;<BR>
+                r = example03$r;<BR>
+				m = example03$m;<BR>
+				plot( x, r / m, xlim = c( 1.95, 4.35 ), ylim = c( 0.24, 0.99 ), type = &quot;p&quot;, pch=&quot;*&quot; ); # Limits set to match the MatLab ones</CODE></TD>
+    </TR>
+  </TABLE>
+  <p>1. For the Gaussian cumulative distribution function (black curve):</p>
+  <TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <TR>
+      <TD><CODE>lg = c( 1/3,1 ); # Lapsing and guessing rates<BR>
+                fit &lt;- binomfit_lims( x, r, m, LINK = &quot;probit&quot;, lims = lg );<BR>
+				numxfit &lt;- 199; # Number of new points to be generated minus 1<BR>
+				xfit &lt;- (max(x)-min(x)) * (0:numxfit) / numxfit + min(x);<BR>
+				# Plot the fitted curve<BR>
+				pfit&lt;-predict( fit, data.frame( x = xfit ), type = &quot;response&quot; );<BR>
+	            lines(xfit, pfit);</CODE></TD>
+    </TR>
+  </TABLE>
+  <p>2. For the Weibull function (red curve):</p>
+  <TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <TR>
+      <TD><CODE>fit &lt;- binom_weib( x, r, m, lims = c( 1/3,1 ) );<BR>
+                # Plot the fitted curve<BR>
+				pfit&lt;-predict( fit, data.frame( x = xfit ), type = &quot;response&quot; );<BR>
+				lines(xfit, pfit, col = &quot;red&quot;);</CODE></TD>
+    </TR>
+  </TABLE>
+  <p>3. For the reverse Weibull function (green curve):</p>
+  <TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <TR>
+      <TD><CODE>fit &lt;- binom_revweib( x, r, m, lims = c( 1/3,1 ) );<BR>
+                # Plot the fitted curve<BR>
+				pfit&lt;-predict( fit, data.frame( x = xfit ), type = &quot;response&quot; );<BR>
+				lines(xfit, pfit, col = &quot;green&quot;);</CODE></TD>
+    </TR>
+  </TABLE>
+  <p>4. For the local linear fit (blue curve):</p>
+  <TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <TR>
+      <TD><CODE>bwd_min &lt;- min( diff( x ) );<BR>
+                bwd_max &lt;- max( x ) - min( x );<BR>
+				bwd &lt;- bandwidth_cross_validation( r, m, x, c( bwd_min, bwd_max ) );<BR>
+				# Plot the fitted curve<BR>
+				bwd &lt;- bwd$deviance; # choose the estimate based on cross-validated deviance<BR>
+				pfit &lt;- locglmfit( xfit, r, m, x, bwd )$fitval;<BR>
+	            lines(xfit, pfit, col = &quot;blue&quot;);</CODE></TD>
+    </TR>
+  </TABLE>
+  </DL>
+  <IMG SRC="../pictures/replicationFig08_PNP_R.png" NAME="graphics2" ALT="Image not found">
+  <p><A HREF="../examples.html#pitch">Back to Examples</A></p>
+</blockquote>
+</BODY>
+</HTML>

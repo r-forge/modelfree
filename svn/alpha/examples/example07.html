@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Ivan Marin-Franch">
+  <meta name="Description"
+ content="Nonparametric estimates of psychometric functions">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nonparametric estimates of psychometric functions: Examples</title>
+  <link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table class="titleBox" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="200"><img alt="logo"
+ src="../pictures/logo.jpg" style="width: 186px; height: 142px;"><br>
+      </th>
+      <th scope="col" bgcolor="#009933"> <h1 class="title" align="center">Model-free estimation of a psychometric function</h1>
+          <blockquote>
+            <h3 class="title" align="right"><script src="../version.js" type="text/javascript"></script></h3>
+          </blockquote></th>
+    </tr>
+    <tr> </tr>
+  </tbody>
+</table>
+<table class="navigationBox" cellspacing="5" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="14%"><a href="../home.html"
+ class="navigation">Home</a></th>
+      <th scope="col" width="14%"><a href="../downloads.html"
+ class="navigation">Downloads</a></th>
+      <th scope="col" width="14%"><a href="../demonstration.html"
+ class="navigation">Demonstration</a></th>
+      <th scope="col" width="14%"><a href="../documentation.html"
+ class="navigation">Documentation</a></th>
+      <th scope="col" bgcolor="#009933" width="14%"><FONT COLOR="#ffffff"><B>Examples</B></FONT></th>
+      <th scope="col" width="14%"><a href="../functions.html"
+ class="navigation">Functions</a></th>
+      <th scope="col" width="14%"><a href="../contacts.html"
+ class="navigation">Contacts</a></th>
+    </tr>
+  </tbody>
+</table>
+<h2>Example 7. Auditory detection of a gap in noise</h2>
+<blockquote>
+<p>Baker, R. J., Jayewardene, D., Sayle, C., &amp; Saeed, S. “Failure to find asymmetry in auditory gap detection”,  Laterality: Asymmetries of Body, Brain and Cognition, 13, 1-21, 2008.</p>
+<p><A HREF="../examples.html#noise">Back to Examples</A></p>
+<p>A 300-ms noise burst containing a gap of 2–8 ms duration or no gap was presented to one ear of a subject. The symbols in the figure below show the proportion of responses &quot;gap&quot; as a function of gap duration. There were 12 trials with each gap duration and 84 trials with no gap.</p>
+<p><STRONG>Parametric and local linear fitting</STRONG></p>
+<p>Three different parametric models and the local linear fitting are used and fits are plotted against the measured psychometric data. Three different parametric models are fitted to these data: Gaussian (probit), Weibull, and reverse Weibull. Local linear fitting is also performed with the bandwidth <cod>bwd</code> chosen by the minimising cross-validated deviance.</p>
+<p>Load the data and plot the measured psychometric data (black dots):</p>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<TR>
+			<TD>
+				<CODE>clear, load examples/07_Baker;<BR>figure; plot( x, r ./
+				m, 'k.'); axis([-0.15 8.15 -0.05 1.05]); axis square;</CODE>
+			</TD>
+		</TR>
+	</TABLE>
+<p>1. For the Gaussian cumulative distribution function (black curve):</p>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<TR>
+			<TD>
+				<CODE>degpol = 1; % Degree of the polynomial<BR>b =
+				binomfit_lims( r, m, x, degpol, 'probit' );<BR>numxfit = 199; %
+				Number of new points to be generated minus 1<BR>xfit =
+				[min(x):(max(x)-min(x))/numxfit:max( x ) ]';<BR>% Plot the fitted
+				curve<BR>pfit = binomval_lims( b, xfit, 'probit' );<BR>
+				hold on,
+				plot( xfit, pfit, 'k' );</CODE>
+			</TD>
+		</TR>
+	</TABLE>
+<p>2. For the Weibull function (red curve):</p>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<TR>
+			<TD>
+				<CODE>[ b, K ] = binom_weib( r, m, x );<BR>lims = [0,1]; % Asymptotes of the psychometric function<BR>
+                % Plot the fitted curve<BR>
+                pfit = binomval_lims( b, xfit, 'weibull', lims, K );<BR>
+                hold on, plot( xfit, pfit, 'r' );</CODE></TD>
+		</TR>
+	</TABLE>
+<p>3. For the reverse Weibull function (green curve):</p>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<TR>
+			<TD>
+				<CODE>[ b, K ] = binom_revweib( r, m, x );<BR>% Plot the
+				fitted curve<BR>pfit = binomval_lims( b, xfit, 'revweibull',
+				lims, K );<BR>
+				hold on, plot( xfit, pfit, 'g' );</CODE>
+			</TD>
+		</TR>
+	</TABLE>
+<p>4. For the local linear fit (blue curve):</p>
+	<TABLE WIDTH=100% BORDER=1 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<TR>
+			<TD>
+				<CODE>bwd_min = min( diff( x ) );<BR>bwd_max = max( x ) - min(
+				x );<BR>bwd = bandwidth_cross_validation( r, m, x, [ bwd_min,
+				bwd_max ] );<BR>% Plot the fitted curve<BR>bwd = bwd(3); % </CODE><CODE>choose
+				the third estimate, which is based on cross-validated
+				deviance</CODE><CODE><BR>pfit = locglmfit( xfit, r, m, x, bwd
+				);<BR>
+				hold on, plot( xfit, pfit, 'b' );</CODE>			</TD>
+		</TR>
+	</TABLE>
+<IMG SRC="../pictures/replicationFig12_PNP.png" NAME="graphics2" ALT="Image not found">
+<p><A HREF="../examples.html#noise">Back to Examples</A></p>
+</blockquote>
+</BODY>
+</HTML>

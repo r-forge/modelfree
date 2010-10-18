@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Ivan Marin-Franch">
+  <meta name="Description"
+ content="Nonparametric estimates of psychometric functions">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nonparametric estimates of psychometric functions: Functions</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table class="titleBox" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="200"><img alt="logo"
+ src="pictures/logo.jpg" style="width: 186px; height: 142px;"><br>
+      </th>
+      <th scope="col" bgcolor="#009933"> <h1 class="title" align="center">Model-free estimation of a psychometric function</h1>
+          <blockquote>
+            <h3 class="title" align="right"><script src="version.js" type="text/javascript"></script></h3>
+          </blockquote></th>
+    </tr>
+    <tr> </tr>
+  </tbody>
+</table>
+<table class="navigationBox" cellspacing="5" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="14%"><a href="home.html"
+ class="navigation">Home</a></th>
+       <th scope="col" width="14%"><a href="downloads.html"
+ class="navigation">Downloads</a></th>
+       <th scope="col" width="14%"><a href="demonstration.html"
+ class="navigation">Demonstration</a></th>
+      <th scope="col" width="14%"><a href="documentation.html"
+ class="navigation">Documentation</a></th>
+      <th scope="col" width="14%"><a href="examples.html"
+ class="navigation">Examples</a></th>
+      <th scope="col" bgcolor="#009933" width="14%"><FONT COLOR="#ffffff"><B>Functions</B></FONT></th>
+      <th scope="col" width="14%"><a href="contacts.html"
+ class="navigation">Contacts</a></th>
+    </tr>
+  </tbody>
+</table>
+<!-- END OF HEADER --><!-- BODY -->
+<h2><a name="functions"></a>Functions</h2>
+<blockquote>
+<p><a href="functions/bandwidth_bootstrap.html" name="bandwidth_bootstrap"><code>bandwidth_bootstrap</code></a></p>
+<blockquote><blockquote>Bootstrap estimate of the optimal bandwidth <code>h</code> for a local polynomial estimate of the psychometric function with specified guessing and lapsing rates.</blockquote></blockquote>
+<p><a href="functions/bandwidth_cross_validation.html" name="bandwidth_cross_validation"><code>bandwidth_cross_validation</code></a></p>
+<blockquote><blockquote>Cross-validation bandwidth for a local polynomial estimate of the psychometric function with specified guessing and lapsing rates.</blockquote></blockquote>
+<p><a href="functions/bandwidth_optimal.html" name="bandwidth_optimal"><code>bandwidth_optimal</code></a></p>
+<blockquote><blockquote>Optimal bandwidth for a local polynomial estimate of the psychometric function with specified guessing and lapsing rates. The difference between this function and <a href="functions/bandwidth_cross_validation.html"><code>bandwidth_cross_validation</code></a> is that here the true psychometric function is known.</blockquote></blockquote>
+<p><a href="functions/bandwidth_plugin.html" name="bandwidth_plugin"><code>bandwidth_plugin</code></a></p>
+<blockquote><blockquote>AMISE optimal bandwidth for a local polynomial estimate of the psychometric function.</blockquote></blockquote>
+<p><a href="functions/binom_lims.html" name="binom_lims"><code>binom_lims</code></a></p>
+<blockquote><blockquote>Maximum likelihood estimates of the parameters of the psychometric function with guessing and lapsing rates, only guessing rate, 
+	or only lapsing rate. </blockquote></blockquote>
+<p><a href="functions/binom_revweib.html" name="binom_revweib"><code>binom_revweib</code></a></p>
+<blockquote><blockquote>Maximum likelihood estimates of the parameters of the reverse Weibull 
+	model for the psychometric function.</blockquote></blockquote>
+<p><a href="functions/binom_weib.html" name="binom_weib"><code>binom_weib</code></a></p>
+<blockquote><blockquote>Maximum likelihood estimates of the parameters of the Weibull 
+	model for the psychometric function.</blockquote></blockquote>
+<p><a href="functions/binomfit_lims.html" name="binomfit_lims"><code>binomfit_lims</code></a></p>
+<blockquote><blockquote>Maximum likelihood estimates of the parameters in a binomial generalised linear model with guessing and 
+lapsing rates.</blockquote></blockquote>
+<p><a href="functions/binomval_lims.html" name="binomval_lims"><code>binomval_lims</code></a></p>
+<blockquote><blockquote>Fitted values at points <code>xfit</FONT></code> for a binomial generalized linear model with coefficients <code>b</code> 
+and guessing and lapsing rates.</blockquote></blockquote>
+<p><a href="functions/bootstrap_ci_sl.html" name="bootstrap_ci_sl"><code>bootstrap_ci_sl</code></a></p>
+<blockquote><blockquote>Bootstrap estimate of a confidence interval at a significance level alpha for the estimated slope for the local polynomial estimate of the psychometric function with guessing and lapsing rates. The confidence interval is based on bootstrap percentiles.</blockquote></blockquote> 
+<p><a href="functions/bootstrap_ci_th.html" name="bootstrap_ci_th"><code>bootstrap_ci_th</code></a></p>
+<blockquote><blockquote>Bootstrap estimate of a confidence interval at a significance level alpha for the estimated threshold for the local polynomial estimate of the psychometric function with guessing and lapsing rates. The confidence interval is based on bootstrap percentiles.</blockquote></blockquote>
+<p><a href="functions/bootstrap_sd_sl.html" name="bootstrap_sd_sl"><code>bootstrap_sd_sl</code></a></p>
+<blockquote><blockquote>Bootstrap estimate of the standard deviation of the estimated slope for the local polynomial estimate of the psychometric function with guessing and lapsing
+rates.</blockquote></blockquote>
+<p><a href="functions/bootstrap_sd_th.html" name="bootstrap_sd_th"><code>bootstrap_sd_th</code></a></p>
+<blockquote><blockquote>Bootstrap estimate of the standard deviation of the estimated threshold for the local polynomial estimate of the psychometric function with guessing and lapsing rates.</blockquote></blockquote>
+<p><a href="functions/comploglog_link.html" name="comploglog_link"><code>comploglog_link</code></a></p>
+<blockquote><blockquote>Complementary log-log link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+<p><a href="functions/deviance.html" name="deviance"><code>deviance</code></a></p>
+<blockquote><blockquote>Deviance for the fitted values of the psychometric function <code>pfit</code>.</blockquote></blockquote>
+<p><a href="functions/locglmfit.html" name="locglmfit"><code>locglmfit</code></a></p>
+<blockquote><blockquote>Local polynomial estimator for the psychometric function and <code>eta</code> function (psychometric function transformed by <code>link</code>) for binomial data; also returns the hat matrix <code>H</code>.</blockquote></blockquote><p><a href="functions/Logit_link.html" name="Logit_link"><code>logit_link</code></a></p>
+<blockquote><blockquote>Logit link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+<p><a href="functions/Loglog_link.html" name="Loglog_link"><code>loglog_link</code></a></font></p>
+<blockquote><blockquote>Log-log link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+<p><a href="functions/Probit_link.html" name="Probit_link"><code>probit_link</code></a></font></p>
+<blockquote><blockquote>Probit link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+<p><a href="functions/revweibull_link.html" name="revweib_link"><code>revweibull_link</code></a></font></p>
+<blockquote><blockquote> Reverse Weibull link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed, and 
+				the power parameter is set to be equal <code>K</code>; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+<p><a href="functions/threshold_slope.html" name="threshold_slope" class="style6"><code>threshold_slope</code></a></p>
+<blockquote><blockquote>Approximate value of <code>x</code> (<code>=x_th</code>) for which the value of the estimated psychometric function is equal to <code>thresh</code> 
+	and the approximate value of slope at <code>x_th</code>.</blockquote></blockquote>
+<p><a href="functions/weibull_link.html" name="weib_link"><code>weibull_link</code></a></p>
+<blockquote><blockquote>Weibull link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions. The guessing rate and lapsing rate are fixed, and 
+				the power parameter is set to be equal <code>K</code>; hence <code>link</code> is a function of only one variable.</blockquote></blockquote>
+</blockquote>
+</body>
+</html>

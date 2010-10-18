@@ -1,0 +1,239 @@
+Entry: 01_Miranda
+Aliases: example01
+Keywords: datasets
+Description: Example 1. Frequency of seeing
+URL: ../../../library/modelfree/html/01_Miranda.html
+
+Entry: 02_Levi
+Aliases: example02
+Keywords: datasets
+Description: Example 2. Visual detection of path deviation
+URL: ../../../library/modelfree/html/02_Levi.html
+
+Entry: 03_Carcagno
+Aliases: example03
+Keywords: datasets
+Description: Example 3. Discrimination of pitch
+URL: ../../../library/modelfree/html/03_Carcagno.html
+
+Entry: 04_Xie
+Aliases: example04
+Keywords: datasets
+Description: Example 4. Discrimination of 'porthole' views of natural scenes
+URL: ../../../library/modelfree/html/04_Xie.html
+
+Entry: 05_Schofield
+Aliases: example05
+Keywords: datasets
+Description: Example 5. Induction of a visual motion aftereffect
+URL: ../../../library/modelfree/html/05_Schofield.html
+
+Entry: 06_Nascimento
+Aliases: example06
+Keywords: datasets
+Description: Example 6. Discrimination of image approximations
+URL: ../../../library/modelfree/html/06_Nascimento.html
+
+Entry: 07_Baker
+Aliases: example07
+Keywords: datasets
+Description: Example 7. Auditory detection of a gap in noise
+URL: ../../../library/modelfree/html/07_Baker.html
+
+Entry: bandwidth_bootstrap
+Aliases: bandwidth_bootstrap
+Keywords: nonparametric models regression nonlinear
+Description: Bootstrap estimate of bandwidth
+URL: ../../../library/modelfree/html/bandwidth_bootstrap.html
+
+Entry: bandwidth_cross_validation
+Aliases: bandwidth_cross_validation
+Keywords: nonparametric models regression nonlinear
+Description: Cross-validation estimate of bandwidth
+URL: ../../../library/modelfree/html/bandwidth_cross_validation.html
+
+Entry: bandwidth_optimal
+Aliases: bandwidth_optimal
+Keywords: nonparametric models regression nonlinear
+Description: Cross-validation estimate of bandwidth for known distributions
+URL: ../../../library/modelfree/html/bandwidth_optimal.html
+
+Entry: bandwidth_plugin
+Aliases: bandwidth_plugin
+Keywords: nonparametric models regression nonlinear
+Description: Plug in estimation of Bandwidth
+URL: ../../../library/modelfree/html/bandwidth_plugin.html
+
+Entry: binom_g
+Aliases: binom_g
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function with guessing rate
+URL: ../../../library/modelfree/html/binom_g.html
+
+Entry: binom_gl
+Aliases: binom_gl
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/binom_gl.html
+
+Entry: binom_l
+Aliases: binom_l
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function with lapsing rate
+URL: ../../../library/modelfree/html/binom_l.html
+
+Entry: binom_lims
+Aliases: binom_lims
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/binom_lims.html
+
+Entry: binom_revweib
+Aliases: binom_revweib
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function fitting for reverse Weibull link function
+URL: ../../../library/modelfree/html/binom_revweib.html
+
+Entry: binom_weib
+Aliases: binom_weib
+Keywords: nonparametric models regression nonlinear
+Description: Psychometric function fitting for Weibull link function
+URL: ../../../library/modelfree/html/binom_weib.html
+
+Entry: binomfit_lims
+Aliases: binomfit_lims
+Keywords: nonparametric models regression nonlinear
+Description: Generalized linear model fit with guessing and lapsing rates
+URL: ../../../library/modelfree/html/binomfit_lims.html
+
+Entry: bootstrap_ci_sl
+Aliases: bootstrap_ci_sl
+Keywords: nonparametric models regression nonlinear
+Description: Bootstrap estimate of confidence interval for slope estimation
+URL: ../../../library/modelfree/html/bootstrap_ci_sl.html
+
+Entry: bootstrap_ci_th
+Aliases: bootstrap_ci_th
+Keywords: nonparametric models regression nonlinear
+Description: Bootstrap estimate of confidence interval for threshold estimation
+URL: ../../../library/modelfree/html/bootstrap_ci_th.html
+
+Entry: bootstrap_sd_sl
+Aliases: bootstrap_sd_sl
+Keywords: nonparametric models regression nonlinear
+Description: Bootstrap estimate the standard deviation of slope estimation
+URL: ../../../library/modelfree/html/bootstrap_sd_sl.html
+
+Entry: bootstrap_sd_th
+Aliases: bootstrap_sd_th
+Keywords: nonparametric models regression nonlinear
+Description: Bootstrap estimate the standard deviation of threshold estimation
+URL: ../../../library/modelfree/html/bootstrap_sd_th.html
+
+Entry: checkinput
+Aliases: checkinput
+Keywords: utilities
+Description: Check input parameters of modelfree functions
+URL: ../../../library/modelfree/html/checkinput.html
+
+Entry: comploglog_link
+Aliases: comploglog_link
+Keywords: nonparametric models regression nonlinear
+Description: Complementary log-log link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/comploglog_link.html
+
+Entry: comploglog_link_private
+Aliases: comploglog_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Complementary log-log link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/comploglog_link_private.html
+
+Entry: deviance2
+Aliases: deviance2
+Keywords: nonparametric
+Description: Deviance between data and fitted function
+URL: ../../../library/modelfree/html/deviance2.html
+
+Entry: locglmfit
+Aliases: locglmfit
+Keywords: nonparametric models regression nonlinear
+Description: Local generalized linear fitting
+URL: ../../../library/modelfree/html/locglmfit.html
+
+Entry: locglmfit_private
+Aliases: locglmfit_private
+Keywords: nonparametric models regression nonlinear
+Description: Local generalized linear fitting with usual (non-sparse) matrices
+URL: ../../../library/modelfree/html/locglmfit_private.html
+
+Entry: locglmfit_sparse_private
+Aliases: locglmfit_sparse_private
+Keywords: nonparametric models regression nonlinear
+Description: Local generalized linear fitting with sparse matrices
+URL: ../../../library/modelfree/html/locglmfit_sparse_private.html
+
+Entry: logit_link
+Aliases: logit_link
+Keywords: nonparametric models regression nonlinear
+Description: Logit link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/logit_link.html
+
+Entry: logit_link_private
+Aliases: logit_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Logit link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/logit_link_private.html
+
+Entry: loglog_link
+Aliases: loglog_link
+Keywords: nonparametric models regression nonlinear
+Description: Log-log link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/loglog_link.html
+
+Entry: loglog_link_private
+Aliases: loglog_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Log-log link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/loglog_link_private.html
+
+Entry: probit_link
+Aliases: probit_link
+Keywords: nonparametric models regression nonlinear
+Description: Probit link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/probit_link.html
+
+Entry: probit_link_private
+Aliases: probit_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Probit link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/probit_link_private.html
+
+Entry: revweibull_link
+Aliases: revweibull_link
+Keywords: nonparametric models regression nonlinear
+Description: Reverse Weibull link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/revweibull_link.html
+
+Entry: revweibull_link_private
+Aliases: revweibull_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Reverse Weibull link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/revweibull_link_private.html
+
+Entry: threshold_slope
+Aliases: threshold_slope
+Keywords: nonparametric models regression nonlinear
+Description: Threshold and slope of estimated psychometric function
+URL: ../../../library/modelfree/html/threshold_slope.html
+
+Entry: weibull_link
+Aliases: weibull_link
+Keywords: nonparametric models regression nonlinear
+Description: Weibull link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/weibull_link.html
+
+Entry: weibull_link_private
+Aliases: weibull_link_private
+Keywords: nonparametric models regression nonlinear
+Description: Weibull link function with guessing and lapsing rates
+URL: ../../../library/modelfree/html/weibull_link_private.html

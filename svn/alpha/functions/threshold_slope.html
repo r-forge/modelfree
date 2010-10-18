@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Ivan Marin-Franch">
+  <meta name="Description"
+ content="Nonparametric estimates of psychometric functions">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nonparametric estimates of psychometric functions: Functions</title>
+  <link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table class="titleBox" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="200"><img alt="logo"
+ src="../pictures/logo.jpg" style="width: 186px; height: 142px;"><br>
+      </th>
+      <th scope="col" bgcolor="#009933"> <h1 class="title" align="center">Model-free estimation of a psychometric function</h1>
+          <blockquote>
+            <h3 class="title" align="right"><script src="../version.js" type="text/javascript"></script></h3>
+          </blockquote></th>
+    </tr>
+    <tr> </tr>
+  </tbody>
+</table>
+<table class="navigationBox" cellspacing="5" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="14%"><a href="../home.html"
+ class="navigation">Home</a></th>
+      <th scope="col" width="14%"><a href="../downloads.html"
+ class="navigation">Downloads</a></th>
+      <th scope="col" width="14%"><a href="../demonstration.html"
+ class="navigation">Demonstration</a></th>
+      <th scope="col" width="14%"><a href="../documentation.html"
+ class="navigation">Documentation</a></th>
+      <th scope="col" width="14%"><a href="../examples.html"
+ class="navigation">Examples</a></th>
+      <th scope="col" bgcolor="#009933" width="14%"><FONT COLOR="#ffffff"><B>Functions</B></FONT></th>
+      <th scope="col" width="14%"><a href="../contacts.html"
+ class="navigation">Contacts</a></th>
+    </tr>
+  </tbody>
+</table>
+<code><H3>threshold_slope</H3></code>
+<BLOCKQUOTE>
+<p><A HREF="../functions.html#threshold_slope">Back to Functions</A></p>
+	<TABLE WIDTH=100% BORDER=2 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+		<COL WIDTH=256*>
+		<TR>
+			<TD><code>[x_th,slope] = threshold_slope(pfit,xfit,thresh);</code>
+			</TD>
+		</TR>
+	</TABLE>
+    <p>The function finds the approximate value of <code>x</code> (<code>=x_th</code>) for which the value of the estimated psychometric function is equal to <code>thresh</code> and the approximate value of slope in <code>x_th</code>.</p>
+<p><STRONG>Input</STRONG>:</p>
+<BLOCKQUOTE><BLOCKQUOTE>
+<p><code>pfit</code>: estimated values of the psychometric function</p>
+<p><code>xfit</code>: stimulus levels in which the function was estimated</p>
+</BLOCKQUOTE></BLOCKQUOTE>
+<p><STRONG>Optional input</STRONG>:</p>
+<BLOCKQUOTE><BLOCKQUOTE>
+<p><code>thresh</code>: criterion level at which to estimate threshold; default is 0.5</p>
+</BLOCKQUOTE></BLOCKQUOTE>
+<p><STRONG>Output</STRONG>:</p>
+<BLOCKQUOTE><BLOCKQUOTE>
+<p><code>x_th</code>: estimated threshold</p>
+<p><code>slope</code>: estimated values of slope, i.e. discrete derivative of <code>pfit</code> at <code>x_th</code></p>
+</BLOCKQUOTE></BLOCKQUOTE>
+<p><A HREF="../functions.html#threshold_slope">Back to Functions</A></p>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+bandwidth_bootstrap     Bootstrap estimate of bandwidth
+bandwidth_cross_validation
+                        Cross-validation estimate of bandwidth
+bandwidth_optimal       Cross-validation estimate of bandwidth for
+                        known distributions
+bandwidth_plugin        Plug in estimation of Bandwidth
+binom_g                 Psychometric function with guessing rate
+binom_gl                Psychometric function with guessing and lapsing
+                        rates
+binom_l                 Psychometric function with lapsing rate
+binom_lims              Psychometric function with guessing and lapsing
+                        rates
+binom_revweib           Psychometric function fitting for reverse
+                        Weibull link function
+binom_weib              Psychometric function fitting for Weibull link
+                        function
+binomfit_lims           Generalized linear model fit with guessing and
+                        lapsing rates
+bootstrap_ci_sl         Bootstrap estimate of confidence interval for
+                        slope estimation
+bootstrap_ci_th         Bootstrap estimate of confidence interval for
+                        threshold estimation
+bootstrap_sd_sl         Bootstrap estimate the standard deviation of
+                        slope estimation
+bootstrap_sd_th         Bootstrap estimate the standard deviation of
+                        threshold estimation
+checkinput              Check input parameters of modelfree functions
+comploglog_link         Complementary log-log link function with
+                        guessing and lapsing rates
+comploglog_link_private
+                        Complementary log-log link function with
+                        guessing and lapsing rates
+deviance2               Deviance between data and fitted function
+example01               Example 1. Frequency of seeing
+example02               Example 2. Visual detection of path deviation
+example03               Example 3. Discrimination of pitch
+example04               Example 4. Discrimination of 'porthole' views
+                        of natural scenes
+example05               Example 5. Induction of a visual motion
+                        aftereffect
+example06               Example 6. Discrimination of image
+                        approximations
+example07               Example 7. Auditory detection of a gap in noise
+locglmfit               Local generalized linear fitting
+locglmfit_private       Local generalized linear fitting with usual
+                        (non-sparse) matrices
+locglmfit_sparse_private
+                        Local generalized linear fitting with sparse
+                        matrices
+logit_link              Logit link function with guessing and lapsing
+                        rates
+logit_link_private      Logit link function with guessing and lapsing
+                        rates
+loglog_link             Log-log link function with guessing and lapsing
+                        rates
+loglog_link_private     Log-log link function with guessing and lapsing
+                        rates
+probit_link             Probit link function with guessing and lapsing
+                        rates
+probit_link_private     Probit link function with guessing and lapsing
+                        rates
+revweibull_link         Reverse Weibull link function with guessing and
+                        lapsing rates
+revweibull_link_private
+                        Reverse Weibull link function with guessing and
+                        lapsing rates
+threshold_slope         Threshold and slope of estimated psychometric
+                        function
+weibull_link            Weibull link function with guessing and lapsing
+                        rates
+weibull_link_private    Weibull link function with guessing and lapsing
+                        rates

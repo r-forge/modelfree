@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta name="Author" content="Ivan Marin-Franch">
+  <meta name="Description"
+ content="Nonparametric estimates of psychometric functions">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Nonparametric estimates of psychometric functions: Functions</title>
+  <link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table class="titleBox" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="200"><img alt="logo"
+ src="../pictures/logo.jpg" style="width: 186px; height: 142px;"><br>
+      </th>
+      <th scope="col" bgcolor="#009933"> <h1 class="title" align="center">Model-free estimation of a psychometric function</h1>
+          <blockquote>
+            <h3 class="title" align="right">modelfree (alpha)</h3>
+          </blockquote></th>
+    </tr>
+    <tr> </tr>
+  </tbody>
+</table>
+<table class="navigationBox" cellspacing="5" width="100%">
+  <tbody>
+    <tr>
+      <th scope="col" width="14%"><a href="../home.html"
+ class="navigation">Home</a></th>
+      <th scope="col" width="14%"><a href="../downloads.html"
+ class="navigation">Downloads</a></th>
+      <th scope="col" width="14%"><a href="../demonstration.html"
+ class="navigation">Demonstration</a></th>
+      <th scope="col" width="14%"><a href="../documentation.html"
+ class="navigation">Documentation</a></th>
+      <th scope="col" width="14%"><a href="../examples.html"
+ class="navigation">Examples</a></th>
+      <th scope="col" bgcolor="#009933" width="14%"><FONT COLOR="#ffffff"><B>Functions</B></FONT></th>
+      <th scope="col" width="14%"><a href="../contacts.html"
+ class="navigation">Contacts</a></th>
+    </tr>
+  </tbody>
+</table>
+<code><H3>probit_link</H3></code>
+<BLOCKQUOTE>
+  <p><A HREF="../functions.html#probit_link">back to functions</A></p>
+  <TABLE WIDTH=100% BORDER=2 CELLPADDING=2 CELLSPACING=0 BGCOLOR="#ceffcf">
+    <COL WIDTH=256*>
+    <TR>
+      <TD><code>link = probit_link(lims)</code> </TD>
+    </TR>
+  </TABLE>
+  <p>Probit link in cell form for use with <code>GLMFIT</code>, <code>GLMVAL</code> and other Matlab GLM functions.</p>
+  <p>The guessing rate and 1 − lapsing rate are fixed to values given in <code>lims</code>, hence <code>link</code> is a function of only one variable.</p>
+  <p><STRONG>Optional input</STRONG>:</p>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <p><code>lims</code>: two column vector specifying guessing rate and 1−lapsing rate; default is [0,1]</p>
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+  <p><STRONG>Output</STRONG>:</p>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <p><code>link</code>: probit link for use in all GLM functions; cell with 3 entries:</p>
+      <ul>
+        <li>probitFL: link function</li>
+        <li>probitFD: derivative</li>
+        <li>probitFI: inverse link</li>
+      </ul>
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+  <p><A HREF="../functions.html#probit_link">back to functions</A></p>
+</blockquote>
+</BODY>
+</HTML>

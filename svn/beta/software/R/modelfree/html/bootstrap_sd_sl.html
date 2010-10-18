@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Bootstrap estimate the standard deviation of slope estimation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for bootstrap_sd_sl {modelfree}"><tr><td>bootstrap_sd_sl {modelfree}</td><td align="right">R Documentation</td></tr></table>
+<h2>Bootstrap estimate the standard deviation of slope estimation</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Finds bootstrap estimate of the standard deviation of the estimated slope for the local polynomial estimation of psychometric function (PF) with guessing and lapsing rates as specified
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+value&lt;-bootstrap_sd_sl( TH, r, m, x, N, h0, X = (max(x)-min(x))*(0:999)/999+min(x), link = "logit", guessing = 0, lapsing = 0, K = 2, p = 1, ker = "dnorm", maxiter = 50, tol = 1e-6 );
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>TH</code></td>
+<td>
+required threshold level</td></tr>
+<tr valign="top"><td><code>r</code></td>
+<td>
+number of successes in points x</td></tr>
+<tr valign="top"><td><code>m</code></td>
+<td>
+number of trials in points x </td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+stimulus levels</td></tr>
+<tr valign="top"><td><code>N</code></td>
+<td>
+number of bootstrap replications</td></tr>
+<tr valign="top"><td><code>h0</code></td>
+<td>
+pilot bandwidth; if not specified, then the scaled plug-in bandwidth is used</td></tr>
+<tr valign="top"><td><code>X</code></td>
+<td>
+set of value for which to calculate the estimates of PF for the thresholdestimation; if not given 1000 equally spaced points from min to max of xdes are used</td></tr>
+<tr valign="top"><td><code>link</code></td>
+<td>
+name of the link function to be used; default is "logit"</td></tr>
+<tr valign="top"><td><code>guessing</code></td>
+<td>
+guessing rate; default is 0</td></tr>
+<tr valign="top"><td><code>lapsing</code></td>
+<td>
+lapsing rate; default is 0</td></tr>
+<tr valign="top"><td><code>K</code></td>
+<td>
+power parameter for Weibull and reverse Weibull link; default is 2</td></tr>
+<tr valign="top"><td><code>p</code></td>
+<td>
+order of the polynomial; default is 1</td></tr>
+<tr valign="top"><td><code>ker</code></td>
+<td>
+kernel function for weights; default "dnorm"</td></tr>
+<tr valign="top"><td><code>maxiter</code></td>
+<td>
+maximum number of iterations in Fisher scoring; default is 50</td></tr>
+<tr valign="top"><td><code>tol</code></td>
+<td>
+tolerance level at which to stop Fisher scoring; default is 1e-6</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>value</code></td>
+<td>
+Object with 2 components: 
+sd: bootstrap estimate of the standard deviation of the slope estimate
+sl0: slope estimate</td></tr>
+</table>
+
+<h3>Examples</h3>
+
+<pre>
+data( "01_Miranda" )
+bwd &lt;- 0.2959;
+value &lt;- bootstrap_sd_sl( 0.5, example01$r, example01$m, example01$x, 10, bwd );
+</pre>
+
+
+
+<hr><div align="center">[Package <em>modelfree</em> version 0.2 <a href="00Index.html">Index</a>]</div>
+
+</body></html>

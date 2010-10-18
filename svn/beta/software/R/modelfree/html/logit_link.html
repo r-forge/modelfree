@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Logit link function with guessing and lapsing rates</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for logit_link {modelfree}"><tr><td>logit_link {modelfree}</td><td align="right">R Documentation</td></tr></table>
+<h2>Logit link function with guessing and lapsing rates</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Logit link for use with GLM functions. The guessing and lapsing rate are fixed to values given in <code>lims</code>, hence <code>link</code> is a function of only one variable
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+link&lt;-logit_link( guessing = 0, lapsing = 0 );
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>guessing</code></td>
+<td>
+guessing rate; default is 0</td></tr>
+<tr valign="top"><td><code>lapsing</code></td>
+<td>
+lapsing rate; default is 0</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>link</code></td>
+<td>
+Logit link for use in all GLM functions</td></tr>
+</table>
+
+<h3>Examples</h3>
+
+<pre>
+data( "01_Miranda" );
+x &lt;- example01$x;
+r &lt;- example01$r;
+m &lt;- example01$m;
+glmdata &lt;- data.frame( cbind( r/m ,m , x ) );
+names( glmdata ) &lt;- c( "resp", "m", "x" );
+glmformula &lt;- c( "resp ~ x" );
+userlink&lt;-logit_link( 0.1, 0.1 );
+fit &lt;- glm( glmformula, data = glmdata, weights = m, family = binomial( userlink ) );
+</pre>
+
+
+
+<hr><div align="center">[Package <em>modelfree</em> version 0.2 <a href="00Index.html">Index</a>]</div>
+
+</body></html>
