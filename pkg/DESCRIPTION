@@ -9,5 +9,5 @@ Depends: R (>= 2.8.1), PolynomF (>= 0.93), SparseM (>= 0.79), stats, utils, base
 LazyLoad: yes
 LazyData: yes
 Description: Local linear estimation of psychometric functions. Provides functions for nonparametric estimation of a psychometric function and for estimation of a derived threshold and slope, and their standard deviations and confidence intervals
-URL: http://personalpages.manchester.ac.uk/staff/david.foster/Software_ModelFree/latest/home.html, http://pcwww.liv.ac.uk/%7Ezychaluk/modelfree/beta/home.html, http://modelfree.r-forge.r-project.org/
-License: GPL GPL (>= 2)
+URL: www.modelfree.manchester.ac.uk, www.modelfree.liv.ac.uk, http://modelfree.r-forge.r-project.org/
+License: GPL (>= 2)
