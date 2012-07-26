@@ -4,7 +4,7 @@ Version: 1.1-0
 Date: 18/10/2010
 Title: Model-free estimation of a psychometric function
 Author: Ivan Marin-Franch <imarinfr@indiana.edu>, Kamila Zychaluk <kamila.zychaluk@liverpool.ac.uk>, and David H. Foster <d.h.foster@manchester.ac.uk>
-Maintainer: Kamila Zychaluk <kamila.zychaluk@liverpool.ac.uk>, David H. Foster <d.h.foster@manchester.ac.uk>, Ivan Marin-Franch <imarinfr@indiana.edu>
+Maintainer: Kamila Zychaluk <kamila.zychaluk@liverpool.ac.uk>
 Depends: R (>= 2.8.1), PolynomF (>= 0.93), SparseM (>= 0.79), stats, utils, base
 LazyLoad: yes
 LazyData: yes
